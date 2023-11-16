@@ -1,9 +1,49 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css?after">
+    <title>독도 | dok.do</title>
+    
+</head>
+<body>
+    <div id='shortenResult'>
+        <img id='resultImageSucceed' src='./assets/image/FinishedIcon.svg' alt='shortenFinished'>
+        <img id='resultImageFailed' src='./assets/image/FailedIcon.svg' alt='shortenFinished'>
+        <p id='resultLinkSuccess'></p>
+        <p id='resultLinkFailed'>링크를 줄이는 데 실패했어요.</p>
+        <p id='resultText'></p>
+    </div>
+
+    
+    <div id="wrapper">
+        <div id="scrollSection">
+            <div id="scrollSection1" class="section">
+                <div id="content">
+                    <div id="title">
+                        <h1 class="title">한 번 들으면<br><span style="color:#297DEC">잊을 수 없는</span> 서비스.</h1>
+                    </div>
+                    <div id="userInput">
+                        <div id="originalURL">
+                            <input type="text" id="input" class="input" placeholder="줄이고 싶은 링크를 입력해주세요." autocomplete="off">
+                        </div>
+                        <div id="shortenURL">
+                            <div id="uniqueCode">
+                                <p id="uniqueCodePlaceholder">ssib.al/</p>
+                                <input type="text" id="custom" placeholder="대신할 이름(선택)" autocomplete="off">
+                            </div>
+                            <div id="submit">
+                                <button onclick="apiRequest()" class="submit pointer" id="shortenButton">링크 줄이기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bFooter" style="line-height: 120%;">
+                <p class="footerText">Copyright 2023, <span class="footerBoldText">HanUL</span> All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
 </html>
